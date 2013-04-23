@@ -1,0 +1,105 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media screen and (max-width: 360px) {
+    
+}
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 521px) {
+
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 699px) {
+  header{
+      left: 5px !important;
+      top:5px !important;
+      width: auto !important;
+      margin: 0 !important;
+  }
+}
+/*Elementos*/
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+#floater {
+    float: left;
+    height: 50%;
+    margin-bottom: -360px;
+    position: relative;
+    width: 1px;
+}
+html, body {
+    height: 100%;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+img{
+    display: block;
+}
+body {
+    background: url("images/background.jpg") no-repeat scroll left top transparent;
+    color:#333333;
+    font-size:11px;
+    text-align:center;
+    margin:0;
+    padding:0;
+    height: 100%;    
+}
+.bold{
+    font-weight: bold;
+}
+header{
+   text-align: left;
+   color:#fff;
+   position: relative;
+   left: 80px;
+   width: 80%;
+   clear: left;
+   height: auto;
+   margin: 0;
+}
+header>div{
+    margin-top: 10px;
+    width:100%;
+}
+.button{
+    padding: 10px;
+    height: 10px;
+    width: 100px;
+    border: solid 1px #be9e7e;
+    cursor: pointer;
+}
+.button:hover{
+    border: solid 2px #fff;
+    cursor: pointer;
+}
+label{
+    float:left;
+    width: 50px;
+}
+input[type=text]{
+    float:left;
+    width: 290px;
+    border-bottom: 2px solid #be9e7e;
+    background: none;
+    box-shadow: none;
+    color:#fff;
+    font-size: 12px;
+    
+}
+input[type=submit]{
+    padding: 5px;
+    height: 30px;
+    width: 70px;
+    background: none;
+    color:#fff;
+    cursor: pointer;
+}
+cufon {
+    padding-bottom: 5px;
+}
