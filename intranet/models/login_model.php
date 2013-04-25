@@ -25,8 +25,17 @@ class Login_Model extends Model
             Session::set('userid', $data['userid']);
             header('location: '.URL.'page');
         } else {
-            header('location: '.URL);
+            header('location: '.URL.'login/error');
         }
+        
+    }
+    public function out()
+    {
+        Session::init();
+        Session::set('loggedIn', false);
+        Session::destroy();
+        header('location: '.URL);
+        exit;
         
     }
     

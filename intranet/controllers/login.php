@@ -16,6 +16,15 @@ class Login extends Controller {
        
         $this->model->run();
     }
+    function out()
+    {
+       
+        $this->model->out();
+    }
+    function error() {
+        $this->view->try='User/Password incorrect';
+        $this->view->render('login/index',true);
+    }
     
 
 }

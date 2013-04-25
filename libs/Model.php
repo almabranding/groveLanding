@@ -53,24 +53,20 @@ class Model {
         $this->lang=$lang;
     }
     public function getMenu($url=''){
-        $level1 = $this->db->select("SELECT * FROM menu WHERE parent = :parent", 
-            array('parent' => '0'));
             $m.='<ul class="header_menu">';
-            foreach($level1 as $value){
-                $m.='<li class="menuTitle"><span class="menuTitlespan">'.$value['name'].'</span>
-                <ul>';
-                $level2=$this->db->select('SELECT * FROM menu WHERE parent = :parent', array('parent' => $value['id']));
-                foreach($level2 as $value){
-                    $sth = $this->db->prepare("SELECT * FROM page WHERE id = :id");
-                    $sth->execute(array(
-                        ':id' => $value['page']
-                    ));
-                    $data = $sth->fetch();
-                    $class=($url==$data['url'])?'selected':'';
-                    $m.='<li class="menuOpt '.$class.'"><a href="'.URL.$this->getTemplate($data['template']).'/view/'.$value['url'].'">'.$value['name'].'</a></li>';
-                }
+                $m.='<li class="menuTitle"><ul>';
+                $m.='<li class="menuOpt">Architecture</li>';
+                $m.='<li class="menuOpt">Amenities</li>';
+                $m.='<li class="menuOpt">Residences</li>';
+                $m.='<li class="menuOpt">Floorplans</li>';
+                $m.='<li class="menuOpt">Team</li>';
+                $m.='<li class="menuOpt">Inspiration</li>';
                 $m.='</ul></li>';
-            }
+                $m.='<li class="menuTitle"><ul>';
+                $m.='<li class="menuOpt">Living</li>';
+                $m.='<li class="menuOpt">Area</li>';
+                $m.='</ul></li>';
+                
         return $m;
     }
     public function ValidarDatos($campo){

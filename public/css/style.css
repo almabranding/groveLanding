@@ -20,12 +20,13 @@
     border: none;
 }
 #container {
+    height: 98%;
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    width: 96%;
-    max-width:1133px;
-    top: 180px; 
+    width: 98%;
+    top: 20px;
+    overflow: hidden;
 }
 
 html, body {
@@ -91,15 +92,50 @@ ol,ul{
     height: 100%;
     margin: 0 auto;
     min-width: 100%;
-    padding-bottom: 225px;
     background: url("../images/gallerysBg.jpg") repeat scroll center center transparent;
 }
 footer{  
     bottom: 0;
     position: absolute;
     width: 100%;
+    z-index: 10;
+}
+footer nav{
+    color: #FFFFFF;
+    font-size: 10px;
+    padding: 15px 0;
+    position: relative;
+}
+footer nav li{
+    vertical-align: middle;
+    display: inline-block;
+    font-size: 12px;
+    margin: 0 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.mapSubBar{
+    background: none repeat scroll 0 0 #CACACA;
+    height: 50px;
 }
 
+.barRight{
+    float: right;
+}
+.barLeft{
+    float: left;
+}
+.preload{
+   background: url("../images/preload.gif") no-repeat scroll 0 0px transparent;
+    left: 100px;
+    position: absolute;
+    top: 100px;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    z-index: 1;
+    display: none;
+}
 #floater {
     float: left;
     height: 50%;
@@ -172,24 +208,6 @@ label {
     text-align: center;
     width: 100px;
 }
-#bgPrev{
-    top: 50%;
-    left: 0;
-    z-index: 1;
-    position: absolute;
-}
-#bgNext{
-    top: 50%;
-    right: 0;
-    z-index: 1;
-    position: absolute;
-}
-#whiteBG{
-    position:relative;
-    width: 1px;
-    height: 0px;
-    display: none;
-}
 #imgFull{
     background: #ffffff;
     overflow: hidden;
@@ -212,12 +230,15 @@ label {
     z-index: 0 !important;
     height: 100% !important;
 }
-#body-background{
-    position: absolute !important;
-    background: #000;
+.body-background{
+    background: none repeat scroll 0 0 #FFFFFF;
+    height: 100%;
+    padding: 0 25px;
+    position: absolute !important;  
 }
-#body-background > img{
+.body-background > img{
     position: absolute !important;
+    height: 100%;
 }
 .logoBox{
     width: 167px;
@@ -300,17 +321,6 @@ input[type="submit"]{
     border-bottom: 2px solid #cacaca;
     cursor: pointer;
 }
-.preload{
-   background: url("../images/preload.gif") no-repeat scroll 0 0px transparent;
-    left: 100px;
-    position: absolute;
-    top: 100px;
-    width: 48px;
-    height: 48px;
-    cursor: pointer;
-    z-index: 1;
-    display: none;
-}
 .bgControl{
     width: 60px;
     height: 60px;
@@ -339,18 +349,17 @@ input[type="submit"]{
     height: 60px;
     cursor: pointer;
 }
-.backgroundMove{
-    left: 250px !important;
-}
-#logo_img{
+#logoImg{
     background: url("../images/logo.png") no-repeat scroll center center transparent;
     height: 40px;
     width: 168px;
     margin: auto;
 }
 #menu{
-    margin: 20px auto auto;
-    width: 470px;
+    background: none repeat scroll 0 0 #FFFFFF;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
 }
 .menuTitle ul{
     float:left;
@@ -362,7 +371,6 @@ input[type="submit"]{
 }
 .header_menu {
     color: #000000;
-    height: auto;
     position: relative;
     text-align: left;
     width: 100%;
@@ -372,13 +380,10 @@ input[type="submit"]{
     cursor: pointer;
     display: inline;
     float: left;
-    height: auto;
-    padding: 0px;
+    margin: 0 15px 20px;
     position: relative;
-    text-transform: uppercase;
-    top: 12px;
     text-align: center;
-    width: 33%;
+    width: 58px;
 }
 .header_menu .selected{
     display: block;
@@ -399,21 +404,10 @@ input[type="submit"]{
     opacity: 1;
 }
 .header_menu ul li {
-    height: 0;
-    opacity: 0;
+    /*height: 0;
+    opacity: 0;*/
     overflow: hidden;    
     padding: 0;
-}
-
-.menuOpt{
-}
-.header_menu:hover .menuOpt{
- /*   display: block;
-    height: 17px;
-    margin: 5px 0;
-    opacity: 1;
-    overflow: visible;
-    text-align: center;*/
 }
 .header_menu ul li a {
     border: medium none;
@@ -432,384 +426,69 @@ input[type="submit"]{
     float:left;
     display: inherit !important;
 }
-#primary{
+.bgContainer{
+    float: left;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 25%;
+    z-index: 0;
+}
+.bgDesc{
+    height: 0px;
+    width: 100%;
+    position: absolute;
+    bottom:0;  
     background: #fff;
-    position: relative;
-}
-#gallerys{
-    margin-bottom: 100px !important;
-}
-.video-list{
-    
-}
-.primaryInfo
-{
-    float:left;
-    width: 275px;
-    text-align: left;
-    padding:10px 15px;
-}
-.primaryImage{
-    width: auto;
-}
-.primaryImage div{
-    background: #fff!important;
-}
-.map-list {
-    max-height: 500px;
-    overflow: hidden;
-    width: 100%;
-}
-.map-list > li {
-    background: none repeat scroll 0 0 #FFFFFF;
-    height: 500px;
-    max-width: 100% !important;
-    vertical-align: top;
-}
-.carouselBox{
-    height: 100%;
-    margin: auto;
-    overflow: hidden;
-    position: relative;
-}
-
-.carouselBox .primaryInfo{
-    float: left;
-    max-width: 200px;
-    min-width: 50px;
-    position: relative;
-    white-space: normal;
-    width: 19%;
-}
-.carouselBox .primaryImage{
-    float: right;
-    height: 100%;
-    position: relative;
-    width: 75%;
-}
-.primaryInfoMap {
-    float: left;
+    opacity: 0;
     padding: 0;
-    text-align: left;
-    width: 20%;
+    font-size: 20px;
 }
-.primaryInfoMap > *{
-    padding: 0 10px;
+.bgDescShow{
+   padding:20px 0;
+   height: 20px; 
+   opacity: 1;
 }
-.primaryInfoMap h1,.primaryInfoMap p{
-    margin: 10px 0;
-}
-.primaryMap{
-    float: left;
-    height: 601px;
-    overflow: hidden;
-    position: relative;
-    width: 80%;
-}
-.mapSubBar{
-    background: none repeat scroll 0 0 #CACACA;
-    height: 45px;
-}
-.mapSubBar .barLogo{
-    float: left;
-    position: relative;
-    left:20px;
-    padding: 10px 0;
-}
-.mapSubBar .barText{
-    float: right;
-    right:20px;
-    color:#fff;
-    padding: 15px 0;
-    font-size: 10px;
-    position: relative;
-}
-.mapLeyend {
-    height: 20px;
-    margin: auto;
-    position: relative;
-    text-align: center;
-    width: 100%;
-}
-.mapLeyend li{
-    display: inline;
-    float: left;
-    margin-right: 5px;
-    position: relative;
-    vertical-align: middle;
-    width: auto;
-}
-.mapLeyend li p{
-    float: left;
-    margin: 0;
-}
-.primaryMap img{
-    float: left;
-    left: 0;
+#descMenu{
+    z-index: 20;
+    opacity: 0;
     position: absolute;
-    text-align: left;
-    width: 100%;
+    height: 0;
 }
-.primaryInfo .title{
-    text-transform: uppercase;
+#descMenu #menu{
+    z-index: 20;
+    position: relative;
 }
-.primaryInfo p {
-    margin: 6px 0;
-}
-.gallerysBox{
-    margin: 20px 20px 0 0;
-}
-.gallerysBoxImg{
-    
-}
-.gallerysBoxImg img{
-    width: auto;
-}
-.gallerysBoxInfo p{
-    padding: 5px 0 0 10px;
-    text-align: left;
-    text-transform: uppercase;
-}
-.gallerysBoxInfo{
-    background: none repeat scroll 0 0 #DADADA;
-    height: 30px;
-    width: 100%;
-}
-.arrowNext{
-    background: url("../images/arrowNext.png") no-repeat scroll center center transparent;
-    height: 60px;
-    width: 60px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
-.tableTitle li{
-    background-image: -ms-linear-gradient(top, #828282 0%, #000508 100%);
-    background-image: -moz-linear-gradient(top, #828282 0%, #000508 100%);
-    background-image: -o-linear-gradient(top, #828282 0%, #000508 100%);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #828282), color-stop(1, #000508));
-    background-image: -webkit-linear-gradient(top, #828282 0%, #000508 100%); 
-    background-image: linear-gradient(to bottom, #828282 0%, #000508 100%);
-    border: medium none;
-    min-width: 29px;
-    padding: 0 0 0 10px;
-    width: 29px;
-    border-left: 2px solid #373737 !important;
-}
-.tableTitle a {
-    background: url("../images/table_sort_arrow.gif") no-repeat scroll right center transparent;
-    color: #FFFFFF;
-    font-family: Tahoma;
-    font-size: 13px;
-    font-weight: bold;
-    line-height: 14px;
-    margin: 0 0 0 10px;
-    padding: 0 10px 0 0;
-    cursor: pointer;
-}
-tableTitle li {
-    border-left: 1px solid #373737;
-}
-#toggle-all {
-    background: url("../images/checkbox.gif") repeat scroll 0 -17px transparent;
-    cursor: pointer;
-    display: block;
-    height: 17px;
-    width: 17px;
-}
-#product-table td {
-    border: 1px solid #D2D2D2;
-    padding: 10px 0 10px 10px;
-}
-.tableView{
-    width: 100%;
-}
-.colsView {
-}
-.colsView > li {
-    display: inline-block;
-    padding: 10px 0 10px 10px;
-}
-.tableContent .colsView{
-     border: 1px solid #D2D2D2;
-}
-.tableView > li{
-    text-align: left;
-    min-width: 110px;
-}
-.tableView .alternate-row{
-    background: none repeat scroll 0 0 #ECECEC;
-}
-.tableView .edit {
-    background: url("../images/table_icon_1.gif") no-repeat scroll 0 0 transparent;
-    display: block;
+#descMenu nav{
     float: left;
-    height: 24px;
-    margin: 0 8px 0 0;
-    width: 24px;
+    width: 30%;
+    position: relative;
 }
-.tableView .edit:hover {
-    background: url("../images/table_icon_1.gif") no-repeat scroll 0 -24px transparent;
+#descInfo{
+    float:left;
+    width: 60%;
 }
-.tableView .delete {
-    background: url("../images/table_icon_2.gif") no-repeat scroll 0 0 transparent;
-    display: block;
-    float: left;
-    height: 24px;
-    margin: 0 8px 0 0;
-    width: 24px;
-}
-.tableView .delete:hover {
-    background: url("../images/table_icon_2.gif") no-repeat scroll 0 -24px transparent;
-}
-ul.slider li {
-    float: left;
-}
-#primary {
-    background: none repeat scroll 0 0 #F9F9F9;
-    height: 595px;
-    margin: 0;
-    overflow: hidden;
-}
-#primary > div{
-    width: 80000px;
-    left: 0;
-}
-.teamRead{
-    bottom: 10px;
-    cursor: pointer;
-    position: absolute;
-    right: 22px;
-    text-align: right;
-}
-.teamCol{
+.navBox{
     background: none repeat scroll 0 0 #FFFFFF;
-    float: left;
-    margin: 0 25px 0 0;
-    overflow: hidden;
-    padding: 20px 18px 40px;
-    position: relative;
-    text-align: left;
-}
-.teamColMax{
-    height: 100% !important;
-}
-.teamCol>div{
-    width: 100%;
-}
-.teamContent{
-    margin: auto;
-    left:130px;
-    position: relative;
-}
-.teamContent .both{
-    width: 29%;
-}
-.teamContent .single{
-    width: 17%;
-}
-.teamPic{
-    width: 100%;
-}
-.teamPic img{
-    width: 100%;
-}
-.teamContent .single .teamPic{
-    padding: 2%;
-    width: 80%;
-    max-width: 160px;
-    float:left;
-}
-.teamContent .both .teamPic{
-    padding: 2%;
-    width: 45%;
-    float:left;
-    max-width: 185px;
-}
-.teamText{
-    width: 100%;
-    clear: both;
-    overflow: hidden;
-}
-.teamTextShort{
-   height: 350px; 
-}
-.teamText h1{
-    font-size: 15px;
-}
-.teamText p{
-    margin:15px 0;
-}
-.mapZoom,#_zi_icon, #_zo_icon{
-    width: 50px !important;
-    height: 50px!important;
-    z-index: 100!important;
-    position: absolute!important;
-    cursor: pointer;
-}
-#controlsMaps{
-    right: 0 !important;
-    left: auto !important;
-    width: auto !important;
-    height: auto !important;
-    bottom: 0 !important;
-}
-#controlsMaps > div{
-    width: 50px !important;
-    height: 50px !important;
-    float:right!important;;
-    position: relative!important;
-    top:auto!important;;
-    left:auto!important;;
-}
-#controlsBg{
-    display: none;
-}
-.zoomMas,#_zi_icon{
-    background: url("../images/mapZoom.jpg") no-repeat scroll -50px 0 transparent !important;
-
-}
-.zoomMenos, #_zo_icon{
-    background: url("../images/mapZoom.jpg") no-repeat scroll 0 0px transparent !important;
-
-}
-.fitScreenBar{
+    bottom: 40px;
+    height: 0;
     position: absolute;
-    top: 0;
     width: 100%;
-    height: 20px;
-    background: #cacaca;
+    z-index: 5;
+    opacity: 0;
 }
-.fitScreen{
-    float:right;
-    right: 20px;
-    top: 5px;
-    cursor: pointer;
-    position: relative;
+.navBoxShow{
+    opacity: 1 !important;
+    height: auto !important;
 }
-.fitScreen img{
-    float: left;
-    margin-right: 10px; 
+#selectMenu{
+    z-index: 30;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    bottom: 0;
 }
-.fullScreen{
-    max-width: 100% !important;
-    width: 100% !important;
-}
-.videoWrapper {
-    background-color: #FFFFFF;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-    margin: 0 auto;
-    min-height: 60px;
-    position: relative;
-}
-.videoInfo{
-    float: left;
-    padding: 10px;
-    text-align: left;
-    white-space: pre-line;
-    width: 20%;
-}
-.videoBox{
-    float: left;
-    width: 80%;
+#selectMenu #menu{
+    z-index: 10;
+    position: absolute;
 }

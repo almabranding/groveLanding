@@ -1,10 +1,47 @@
 <div class="clr"></div></div><div class="clr"></div>
+<div id="descMenu" class="navBox">
+    <nav id="menu">
+    <?php echo $this->getMenu; ?>
+    </nav>
+</div>
+<div id="selectMenu">
+<nav id="menu" class="navBox ">
+    <?php echo $this->getMenu; ?>
+</nav>
 <footer>
     <div class="mapSubBar clr">
-    <div class="barLogo"><img alt="Terra Group" src="/glass/public/images/terraLogo.png" /></div>
-    <div class="barText">&copy;TERRA GROUP 2013&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DISCLAIMER</div>
+    <nav class="barLeft">
+        <ul>
+            <li>
+                Building
+            </li>
+            <li>
+                Neighborhood
+            </li>
+        </ul>
+    </nav>
+    <nav class="barRight">
+        <ul>
+            <li>
+                Disclaimer
+            </li>
+            <li>
+                Contact
+            </li>
+            <li>
+                Facebook
+            </li>
+            <li>
+                Twitter
+            </li>
+            <li>
+                <img alt="Terra Group" src="<?php echo URL;?>/public/images/terraLogo.png" />
+            </li>
+        </ul>
+    </nav>
     </div>
 </footer>
+</div>
 </div>
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>

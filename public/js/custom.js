@@ -1,29 +1,13 @@
 $(document).ready(function() {
-    var mapZoom=0;
-    var BGnum=0;
-    var frame=240;
-    var URL='http://borndevelopments.com/glass/';
-    
-    $('.fitScreen').on("click",function(){
-        
-        
-    });
-    $('header').on('mouseenter',function(){
-        $('.menuOpt').queue(function () {
+    $('#selectMenu').on('mouseenter',function(){
+        $('#selectMenu #menu').queue(function () {
             $(this).clearQueue();
-            $(this).not('.selected').animate({
-                opacity: 1,
-                height: '17px',
-                margin: '5px auto'
-              }, 500);
+            $(this).addClass('navBoxShow',500);
           });
     }).on('mouseleave',function(){
-        $('.menuOpt').queue(function () {
+        $('#selectMenu #menu').queue(function () {
             $(this).clearQueue();
-            $(this).not('.selected').animate({
-                opacity: 0,
-                height: '0px'
-              }, 500);
+            $(this).removeClass('navBoxShow',500);
         });
     });        
     var std=({

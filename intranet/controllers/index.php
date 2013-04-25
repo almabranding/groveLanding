@@ -7,11 +7,10 @@ class Index extends Controller {
     }
     
     function index() {
+        $this->view->try='';
         $this->view->render('login/index',true);
     }
     
-    function details() {
-        $this->view->render('index/index');
-    }
+    
     
 }

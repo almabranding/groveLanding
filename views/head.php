@@ -2,13 +2,12 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Glass</title>
+    <title>Grove</title>
     <meta charset="UTF-8"> 
     <meta property="og:site_name" content="" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="author" content="" />
-
     <!--<link rel="shortcut icon" href="../favicon.ico" Content-type="image/x-icon" />-->
     <link rel="stylesheet" href="<?php echo URL; ?>public/css/style.css" />
     <link rel="stylesheet" href="<?php echo URL; ?>public/css/elastislide.css" />
