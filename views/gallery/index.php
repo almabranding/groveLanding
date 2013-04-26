@@ -3,7 +3,6 @@
 </script>
 
 <?php for($i=0;$i<20;$i++){?>
-
 <div class="bgContainer">
     <div class="body-background" class="">
         <img class="imgBG" src="<?php echo URL . 'public/images/home.jpg'; ?>" alt="Bg">
@@ -12,6 +11,5 @@
         Descripcion
     </div>
 </div>
-
 <?php }?>
 
