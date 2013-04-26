@@ -75,7 +75,7 @@ header>div{
     cursor: pointer;
 }
 .button:hover{
-    border: solid 1px #fff;
+    border: solid 2px #fff;
     cursor: pointer;
 }
 label{
@@ -83,13 +83,14 @@ label{
     width: 50px;
 }
 input[type=text]{
-    background: none repeat scroll 0 0 transparent;
-    border-bottom: 1px solid #FFFFFF;
-    box-shadow: none;
-    color: #FFFFFF;
-    float: left;
-    font-size: 12px;
+    float:left;
     width: 290px;
+    border-bottom: 2px solid #be9e7e;
+    background: none;
+    box-shadow: none;
+    color:#fff;
+    font-size: 12px;
+    
 }
 input[type=submit]{
     padding: 5px;
