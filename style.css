@@ -75,7 +75,7 @@ header>div{
     cursor: pointer;
 }
 .button:hover{
-    border: solid 2px #fff;
+    border: solid 1px #fff;
     cursor: pointer;
 }
 label{
@@ -85,7 +85,7 @@ label{
 input[type=text]{
     float:left;
     width: 290px;
-    border-bottom: 2px solid #be9e7e;
+    border-bottom: 1px solid #fff;
     background: none;
     box-shadow: none;
     color:#fff;
