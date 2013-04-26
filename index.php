@@ -110,14 +110,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     <h1>
         WHERE WOULD <br>YOU LIKE TO LIVE?
     </h1>
-    <div id="qform"> 
     <h2>
-        <p id="quiz"></p>
+        A) Somewhere different<br/>
+        B) Somewhere unique<br/>
+        C) Somewhere extraordinary<br/>
     </h2>
-        <br/><br/>
-    <input class="button" type="submit" value="STICK" id="STICK" style="width: 100px;margin-right: 40px;">
-    <input class="button" type="submit" value="TWIST" id="TWIST" style="width: 100px;">
-    </div>
     <div class="form" style="display: none">
         <div>
             <h2>
@@ -127,25 +124,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
                 Enter your details below and we’ll let you know <br/>when we’re ready to accommodate you.
             </p>
         </div>
-        <div>
-            <form id="form" name="form" action="" method="POST" enctype="multipart/form-data">
-                <div>
-                <label for="name" id='name'>Name</label>
-                <input type="text" value="" name="name">
-                </div>
-                <div>
-                <label for="phone" id='phone'>Phone</label>
-                <input type="text" value="" name="phone">
-                </div>
-                <div>
-                <label for="email" id='email'>Email</label>
-                <input type="text" value="" name="email">
-                </div>
-                <div>
-                <input type="submit" value="Submit" class="button">
-                </div>
-            </form>
-        </div>
+        
     </div>
         
     <div id="sended" style="display: none">
@@ -153,20 +132,33 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         <br/><br/>Your message has been sent.
         </p>
     </div>
-    <div>
+    <div style="margin: 40px 0 10px">
         <img src="http://groveatgrandbay.com/temp/images/grove.png" alt="Grove">
     </div>
-    <div>
-        <p>3 bedroom residences priced from $3,000,000<br>
-        Sales <br>
+        <p>3 bedroom residences priced from $3,000,000 Sales <br>
         2675 South Bayshore Drive <br>
         Coconut Grove, FL 33133<br>
         877 316 4806</p>
-    </div>
-    <div style="height: 30px;">
-        <input style="width: 100px;" onclick="window.open('http://65.97.138.211:5000/','_blank');" type="submit" value="Watch us grow" class="button">
-    </div></a>
 
+        <input style="width: 100px;height: 30px; margin:10px 0 30px 0;" onclick="window.open('http://65.97.138.211:5000/','_blank');" type="submit" value="Watch us grow" class="button">
+        <form id="form" name="form" action="" method="POST" enctype="multipart/form-data"> 
+            <p>Enter your details below and we’ll let you know <br/>when we’re ready to accommodate you.</p>
+            <div>
+            <label for="name" id='name'>Name</label>
+            <input type="text" value="" name="name">
+            </div>
+            <div>
+            <label for="phone" id='phone'>Phone</label>
+            <input type="text" value="" name="phone">
+            </div>
+            <div>
+            <label for="email" id='email'>Email</label>
+            <input type="text" value="" name="email">
+            </div>
+            <div>
+            <input type="submit" value="Submit" class="button">
+            </div>
+        </form>
     <div>
         <img style="float:left;" src="images/terra.png" alt="Terra Group"><div style="position:relative;top:8px;left:8px">Owned and developed by Terra Group</div>
     </div>
