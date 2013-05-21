@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 function ValidarDatos($campo){
 	//Array con las posibles cabeceras a utilizar por un spammer
 	$badHeads = array("Content-Type:",
@@ -135,10 +135,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     <div style="margin: 40px 0 10px">
         <img src="http://groveatgrandbay.com/temp/images/grove.png" alt="Grove">
     </div>
-        <p>3 bedroom residences priced from $3,000,000 Sales <br>
+        <p>3 bedroom residences priced from $3,000,000 <br><br>
+        Sales <br>
         2675 South Bayshore Drive <br>
         Coconut Grove, FL 33133<br>
-        877 316 4806</p>
+        305 929 8646</p>
 
         <input style="width: 100px;height: 30px; margin:10px 0 30px 0;" onclick="window.open('http://65.97.138.211:5000/','_blank');" type="submit" value="Watch us grow" class="button">
         <form id="form" name="form" action="" method="POST" enctype="multipart/form-data"> 
